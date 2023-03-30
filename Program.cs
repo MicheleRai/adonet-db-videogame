@@ -66,9 +66,8 @@ while (esegui)
             string overview = Console.ReadLine() ?? "";
             Console.Write("Prego inserisca l'Id della software house:");
             int softwearHouse_id = Convert.ToInt32(Console.ReadLine());
-            //da fixare
-            var release_date = DateTime.Now;
-            //
+            Console.Write("Prego inserisca la data della uscita nel formato: (yyyy-mm-dd)");
+            var release_date = DateTime.Parse(Console.ReadLine() ?? "");
             Videogame newVg = new(null, name, overview, release_date, softwearHouse_id);
             Manager.AddVideogame(newVg);
             break;
